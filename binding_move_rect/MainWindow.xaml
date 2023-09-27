@@ -1,0 +1,14 @@
+﻿<Window x:Class="binding_move_rect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:binding_move_rect"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas Name="Canvas">
+            <Rectangle Name="Rect" Canvas.Left="100" Stroke="Black" StrokeThickness="3" Fill="Blue" Height="70" Width="120"></Rectangle>
+        </Canvas>
+    </Grid>
+</Window>
