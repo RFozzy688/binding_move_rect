@@ -20,11 +20,24 @@ namespace binding_move_rect
     /// </summary>
     public partial class MainWindow : Window
     {
+        MyRect _rect;
         public MainWindow()
         {
             InitializeComponent();
 
-            Canvas.SetTop(Rect, 100);
+            _rect = new MyRect();
+            _rect.Width = 100;
+            _rect.Height = 100;
+            _rect.Background = Brushes.Blue;
+            _rect.BorderBrush = Brushes.Black;
+            _rect.BorderThickness = new Thickness(3);
+
+
+            MyCanvas.Children.Add(_rect);
+            Canvas.SetLeft(_rect, 100);
+            Canvas.SetTop(_rect, 10);
+
+            DataContext = _rect;
         }
     }
 }

@@ -7,8 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Canvas Name="Canvas">
-            <Rectangle Name="Rect" Canvas.Left="100" Stroke="Black" StrokeThickness="3" Fill="Blue" Height="70" Width="120"></Rectangle>
+        <StackPanel>
+            <TextBlock Margin="5" Width="10" HorizontalAlignment="Left">X</TextBlock>
+            <TextBox Text="{Binding Path=LeftRect, UpdateSourceTrigger=PropertyChanged}" Name="PosX" Margin="5" BorderBrush="Black" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Margin="5" Width="10" HorizontalAlignment="Left">Y</TextBlock>
+            <TextBox Text="{Binding Path=TopRect, UpdateSourceTrigger=PropertyChanged}" Name="PosY" Margin="5" BorderBrush="Black" Width="100" HorizontalAlignment="Left"></TextBox>
+        </StackPanel>
+        <Canvas Margin="5" Name="MyCanvas">
+            <!--<Rectangle Canvas.Top="{Binding ElementName=PosY,Path=Text,Mode=OneWay}" 
+                       Canvas.Left="{Binding ElementName=PosX,Path=Text,Mode=OneWay}"
+                       Name="Rect" Stroke="Black" 
+                       StrokeThickness="3" Fill="Blue" Height="70" Width="120"/>-->
         </Canvas>
     </Grid>
 </Window>
